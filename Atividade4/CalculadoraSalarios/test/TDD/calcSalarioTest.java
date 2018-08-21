@@ -17,9 +17,8 @@ import org.junit.Before;
 public class calcSalarioTest {
     CalculadoraSalarios calculadora;
     funcionario f;
-    public calcSalarioTest() {
-        
-    }
+    public calcSalarioTest() {}
+    
     @Before
     public void InstanciaFuncionario(){
         f = new funcionario();
@@ -34,5 +33,12 @@ public class calcSalarioTest {
          f.setSalarioBase(5000f);
          float salario = calculadora.Calcula(f);
          assertEquals(4000, salario,0.0f);
+     }
+     @Test
+     public void testGerente() {
+         f.setCargo("GERENTE");
+         f.setSalarioBase(2500f);
+         float salario = calculadora.Calcula(f);
+         assertEquals(2000, salario, 0.0f);
      }
 }
