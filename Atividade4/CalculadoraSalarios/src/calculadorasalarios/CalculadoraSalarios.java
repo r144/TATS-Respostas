@@ -32,9 +32,11 @@ public class CalculadoraSalarios {
 
             }
         } else if (f.getCargo().equals("GERENTE")) {
-            salario = salarioBase - salarioBase * 0.3f;
-            if (salario < 5000) {
+            if (salarioBase < 5000) {
                 salario = salarioBase - salarioBase * 0.2f;
+            } else {
+                salario = salarioBase - salarioBase * 0.3f;
+
             }
         }
 
