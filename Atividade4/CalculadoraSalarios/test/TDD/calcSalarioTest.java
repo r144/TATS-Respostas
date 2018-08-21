@@ -15,44 +15,66 @@ import org.junit.Before;
  * @author renato
  */
 public class calcSalarioTest {
+
     CalculadoraSalarios calculadora;
     funcionario f;
-    public calcSalarioTest() {}
-    
+
+    public calcSalarioTest() {
+    }
+
     @Before
-    public void InstanciaFuncionario(){
+    public void InstanciaFuncionario() {
         f = new funcionario();
         f.setCargo("DESENVOLVEDOR");
         f.setEmail("ronaldo@gmail.com");
         f.setNome("ronaldo");
         calculadora = new CalculadoraSalarios();
     }
+
     @Test
-     public void testDesenvolvedor() {
-         f.setCargo("DESENVOLVEDOR");
-         f.setSalarioBase(5000f);
-         float salario = calculadora.Calcula(f);
-         assertEquals(4000, salario,0.0f);
-     }
-     @Test
+    public void testDesenvolvedor() {
+        f.setCargo("DESENVOLVEDOR");
+        f.setSalarioBase(5000f);
+        float salario = calculadora.Calcula(f);
+        assertEquals(4000, salario, 0.0f);
+    }
+
+    @Test
     public void testDesenvolvedor2() {
         f.setCargo("DESENVOLVEDOR");
         f.setSalarioBase(2999f);
         float salario = calculadora.Calcula(f);
         assertEquals(2699.1f, salario, 0.0f);
     }
-     @Test
-     public void testGerente() {
-         f.setCargo("GERENTE");
-         f.setSalarioBase(2500f);
-         float salario = calculadora.Calcula(f);
-         assertEquals(2000, salario, 0.0f);
-     }
-     @Test
-     public void testTestador() {
-         f.setCargo("TESTADOR");
-         f.setSalarioBase(550f);
-         float salario = calculadora.Calcula(f);
-         assertEquals(467.5f, salario, 0.0f);
-     }
+
+    @Test
+    public void testGerente() {
+        f.setCargo("GERENTE");
+        f.setSalarioBase(2500f);
+        float salario = calculadora.Calcula(f);
+        assertEquals(2000, salario, 0.0f);
+    }
+
+    @Test
+    public void testGerente2() {
+        f.setCargo("GERENTE");
+        f.setSalarioBase(2500f);
+        float salario = calculadora.Calcula(f);
+        assertEquals(2000, salario, 0.0f);
+    }
+
+    @Test
+    public void testTestador() {
+        f.setCargo("TESTADOR");
+        f.setSalarioBase(550f);
+        float salario = calculadora.Calcula(f);
+        assertEquals(467.5f, salario, 0.0f);
+    }
+    @Test
+    public void testTestador2() {
+        f.setCargo("TESTADOR");
+        f.setSalarioBase(2500f);
+        float salario = calculadora.Calcula(f);
+        assertEquals(1875f, salario, 0.0f);
+    }
 }
