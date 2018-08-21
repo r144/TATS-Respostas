@@ -17,22 +17,24 @@ public class CalculadoraSalarios {
         if (f.getCargo().equals("DESENVOLVEDOR")) {
             salario = salarioBase - salarioBase * 0.2f;
             if (salario < 3000) {
-                salario =  salarioBase - salarioBase * 0.1f;
+                salario = salarioBase - salarioBase * 0.1f;
             }
         } else if (f.getCargo().equals("DBA")) {
-            salario =  salarioBase - salarioBase * 0.25f;
+            salario = salarioBase - salarioBase * 0.25f;
             if (salario < 2000) {
-                salario =  salarioBase - salarioBase * 0.15f;
+                salario = salarioBase - salarioBase * 0.15f;
             }
         } else if (f.getCargo().equals("TESTADOR")) {
-            salario = salarioBase * 0.25f;
-            if (salario < 2000) {
-                salario =  salarioBase - salarioBase * 0.15f;
+            if (salarioBase < 2000) {
+                salario = salarioBase - salarioBase * 0.15f;
+            } else {
+                salario = salarioBase - salarioBase * 0.25f;
+
             }
         } else if (f.getCargo().equals("GERENTE")) {
-            salario =  salarioBase - salarioBase * 0.3f;
+            salario = salarioBase - salarioBase * 0.3f;
             if (salario < 5000) {
-                salario =  salarioBase - salarioBase * 0.2f;
+                salario = salarioBase - salarioBase * 0.2f;
             }
         }
 
