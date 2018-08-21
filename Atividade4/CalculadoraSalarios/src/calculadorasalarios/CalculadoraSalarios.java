@@ -19,6 +19,7 @@ public class CalculadoraSalarios {
                 salario = salarioBase - salarioBase * 0.1f;
             } else {
                 salario = salarioBase - salarioBase * 0.2f;
+                
             }
         } else if (f.getCargo().equals("DBA")) {
             salario = salarioBase - salarioBase * 0.25f;
