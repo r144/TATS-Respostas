@@ -41,4 +41,11 @@ public class calcSalarioTest {
          float salario = calculadora.Calcula(f);
          assertEquals(2000, salario, 0.0f);
      }
+     @Test
+     public void testTestador() {
+         f.setCargo("TESTADOR");
+         f.setSalarioBase(550f);
+         float salario = calculadora.Calcula(f);
+         assertEquals(467.5f, salario, 0.0f);
+     }
 }
