@@ -15,9 +15,10 @@ public class CalculadoraSalarios {
         float salario = 0;
         float salarioBase = f.getSalarioBase();
         if (f.getCargo().equals("DESENVOLVEDOR")) {
-            salario = salarioBase - salarioBase * 0.2f;
-            if (salario < 3000) {
+            if (salarioBase < 3000) {
                 salario = salarioBase - salarioBase * 0.1f;
+            } else {
+                salario = salarioBase - salarioBase * 0.2f;
             }
         } else if (f.getCargo().equals("DBA")) {
             salario = salarioBase - salarioBase * 0.25f;
