@@ -15,6 +15,9 @@ public class funcionario {
     private Float salarioBase;
     private String cargo;
 
+    public funcionario() {
+    }
+
     public funcionario(String nome, String email, Float salarioBase, String cargo) {
         this.nome = nome;
         this.email = email;
