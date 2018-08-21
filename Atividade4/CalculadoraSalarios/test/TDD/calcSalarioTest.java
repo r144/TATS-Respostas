@@ -77,4 +77,19 @@ public class calcSalarioTest {
         float salario = calculadora.Calcula(f);
         assertEquals(1875f, salario, 0.0f);
     }
+    @Test
+    public void testDba() {
+        f.setCargo("DBA");
+        f.setSalarioBase(550f);
+        float salario = calculadora.Calcula(f);
+        assertEquals(467.5f, salario, 0.0f);
+    }
+
+    @Test
+    public void testDba2() {
+        f.setCargo("DBA");
+        f.setSalarioBase(2500f);
+        float salario = calculadora.Calcula(f);
+        assertEquals(1875f, salario, 0.0f);
+    }
 }
